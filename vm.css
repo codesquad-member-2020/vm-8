@@ -127,7 +127,37 @@
     background-color: whitesmoke;
 
 }
+
 .wallet {
     width: 20%;
+    border: solid 1px red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.wallet > ul > li {
+    display: flex;
+}
+
+.wallet-money, .wallet-money-qty {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    border: solid 1px #d8d8d8;
+}
+
+.wallet-total {
+    width: 210px;
+    height: 50px;
+    margin: 5px;
+    font-size: large;
+    font-weight: 600;
+    border: solid 1px #d8d8d8;
+}
+
+.wallet > ul > li > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
