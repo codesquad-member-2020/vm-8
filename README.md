@@ -1,1 +1,3 @@
-# vm-8
+# vm-8 자판기
+
+![](https://mblogthumb-phinf.pstatic.net/MjAyMDAzMTJfMTI5/MDAxNTgzOTc1MzkwNDM3.82kHZQRNl3fKKs3W-uCwmIjZll32o32RUAmwhQntyUQg.Gt0nwKRey1zci8mj6timeHlWE-xTRNakPF6U0jVFEtUg.PNG.ehak3/vm.png?type=w800)
