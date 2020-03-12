@@ -74,8 +74,50 @@
         },
         {
             "id": 13,
-            "name": "초코우유2",
-            "price": 7000,
+            "name": "딸바주스",
+            "price": 1000,
+            "focus": "false"
+        },
+        {
+            "id": 14,
+            "name": "바나나우유",
+            "price": 500,
+            "focus": "false"
+        },
+        {
+            "id": 15,
+            "name": "커피우유",
+            "price": 1000,
+            "focus": "false"
+        },
+        {
+            "id": 16,
+            "name": "알로에",
+            "price": 1200,
+            "focus": "false"
+        },
+        {
+            "id": 17,
+            "name": "콘칩",
+            "price": 1000,
+            "focus": "false"
+        },
+        {
+            "id": 18,
+            "name": "새우깡",
+            "price": 1000,
+            "focus": "false"
+        },
+        {
+            "id": 19,
+            "name": "감자칩",
+            "price": 2000,
+            "focus": "false"
+        },
+        {
+            "id": 20,
+            "name": "칸초",
+            "price": 1000,
             "focus": "false"
         }
     ]
