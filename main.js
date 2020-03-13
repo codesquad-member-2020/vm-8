@@ -1,17 +1,27 @@
-import View from "./vm_product_view.js";
-import VMProductModel from "./vm_product_model.js";
+import View from "./view.js";
+import Model from "./model.js";
 
 const wallet = document.querySelector(".wallet");
+const walletTotalView = document.querySelector(".wallet-total");
+const VMMoneyView = document.querySelector(".vm-selector-money");
+const walletList = document.querySelector(".wallet-list");
+const walletMoney_qty = document.querySelectorAll(".wallet-money-qty");
 
-const model = new VMProductModel();
-const view = new View(model);
+const views = {
+  walletTotalView: walletTotalView,
+  walletQtyView : walletMoney_qty,
+  VMMoneyView: VMMoneyView
 
-wallet.addEventListener("click", function (event) {
-    if(event.target.className === 'wallet-money') {
-        console.log('click ' + event.target.innerHTML);       
-    }
-})
+};
 
+const model = new Model("http://localhost:5500/json/walletMoney.json");
+const view = new View(model, views);
+
+walletList.addEventListener("click", function(event) {
+  if (event.target.tagName !== "BUTTON") return;
+  console.log(event.target.value);
+  model.pay(Number(event.target.value));
+});
 
 // decreaseButton.addEventListener("click", model.decrease.bind(model));
 // increaseButton.addEventListener("click", model.increase.bind(model));

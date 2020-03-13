@@ -11,7 +11,7 @@ class VMModel extends Observable {
         return selectorMoney;
     }
     getProducts() {
-        fetch('vm_product.json')
+        fetch('vmProduct.json')
             .then(function (response) {
                 return response.json();
             })
@@ -23,5 +23,5 @@ class VMModel extends Observable {
 
 export default VMModel;
 
-const pmodel = new VMdModel();
+const pmodel = new VMModel();
 console.log(pmodel.selectorMoney);

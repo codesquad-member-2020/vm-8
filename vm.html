@@ -1,162 +1,96 @@
 <!DOCTYPE html>
-
 <head>
     <title>Vending Machine</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="vm.css">
 </head>
-
 <body>
     <div class="container">
-        <div class="vm">
-            <div class="vm-product">
-                <div class="vm-product-menu">
-                    <ul>
-                        <li>
-                            <div class="product-name">콜라</div>
-                            <p class="product-price">500</p>
-                        </li>
-                        <li>
-                            <div class="product-name">파인애플맛 환타</div>
-                            <p class="product-price">400</p>
-                        </li>
-                        <li>
-                            <div class="product-name">포도맛 환타</div>
-                            <p class="product-price">300</p>
-                        </li>
-                        <li>
-                            <div class="product-name">레몬에이드</div>
-                            <p class="product-price">900</p>
-                        </li>
-                        <li>
-                            <div class="product-name">사이다</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">봉봉</div>
-                            <p class="product-price">1200</p>
-                        </li>
-                        <li>
-                            <div class="product-name">코코아주스</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">제로콜라</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">파워에이드</div>
-                            <p class="product-price">2000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">초코우유</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">초코우유2</div>
-                            <p class="product-price">7000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">초코우유3</div>
-                            <p class="product-price">600</p>
-                        </li>
-                        <li>
-                            <div class="product-name">딸바주스</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">바나나우유</div>
-                            <p class="product-price">500</p>
-                        </li>
-                        <li>
-                            <div class="product-name">커피우유</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">알로에</div>
-                            <p class="product-price">1200</p>
-                        </li>
-                        <li>
-                            <div class="product-name">콘칩</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">새우깡</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">감자칩</div>
-                            <p class="product-price">2000</p>
-                        </li>
-                        <li>
-                            <div class="product-name">칸초</div>
-                            <p class="product-price">1000</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="vm-selector">
-                <div class="vm-selector-money">500 원</div>
-                <div class="vm-selector-number">
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                        <li>0</li>
-                        <li>선택</li>
-                    </ul>
-                </div>
-                <div class="vm-selector-message">
-                </div>
+    <div class="vm">
+        <div class="vm-product">
+            <div class="vm-product-menu">
+            <ul>
+                <li><div class="product-name">콜라</div><p class="product-price">500</p></li>
+                <li><div class="product-name">파인애플맛 환타</div><p class="product-price">400</p></li>
+                <li><div class="product-name">포도맛 환타</div><p class="product-price">300</p></li>
+                <li><div class="product-name">레몬에이드</div><p class="product-price">900</p></li>
+                <li><div class="product-name">사이다</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">봉봉</div><p class="product-price">1200</p></li>
+                <li><div class="product-name">코코아주스</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">제로콜라</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">파워에이드</div><p class="product-price">2000</p></li>
+                <li><div class="product-name">초코우유</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">초코우유2</div><p class="product-price">7000</p></li>
+                <li><div class="product-name">초코우유3</div><p class="product-price">600</p></li>
+                <li><div class="product-name">딸바주스</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">바나나우유</div><p class="product-price">500</p></li>
+                <li><div class="product-name">커피우유</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">알로에</div><p class="product-price">1200</p></li>
+                <li><div class="product-name">콘칩</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">새우깡</div><p class="product-price">1000</p></li>
+                <li><div class="product-name">감자칩</div><p class="product-price">2000</p></li>
+                <li><div class="product-name">칸초</div><p class="product-price">1000</p></li>
+            </ul>
             </div>
         </div>
-
-        <div class="wallet">
-            <ul>
-                <li>
-                    <div class="wallet-money">10원</div>
-                    <div class="wallet-money-qty">0개</div>
-                </li>
-                <li>
-                    <div class="wallet-money">50원</div>
-                    <div class="wallet-money-qty">1개</div>
-                </li>
-                <li>
-                    <div class="wallet-money">100원</div>
-                    <div class="wallet-money-qty">5개</div>
-                </li>
-                <li>
-                    <div class="wallet-money">500원</div>
-                    <div class="wallet-money-qty">5개</div>
-                </li>
-                <li>
-                    <div class="wallet-money">1000원</div>
-                    <div class="wallet-money-qty">2개</di v>
-                </li>
-                <li>
-                    <div class="wallet-money">5000원</div>
-                    <div class="wallet-money-qty">2개</div>
-                </li>
-                <li>
-                    <div class="wallet-money">10000원</div>
-                    <div class="wallet-money-qty">1개</div>
-                </li>
-                <li>
-                    <div class="wallet-total">
-                        <p>23550원</p>
-                    </div>
-                </li>
-            </ul>
+        <div class="vm-selector">
+            <div class="vm-selector-money"></div>
+            <div class="vm-selector-number">
+               <ul class="vm-selector-number-ul">
+                   <li>1</li>
+                   <li>2</li>
+                   <li>3</li>
+                   <li>4</li>
+                   <li>5</li>
+                   <li>6</li>
+                   <li>7</li>
+                   <li>8</li>
+                   <li>9</li>
+                   <li >0</li>
+                   <li>선택</li>
+               </ul>
+            </div>
+            <div class="vm-selector-message"></div>
         </div>
     </div>
-    <script type="module" src="./main.js"></script>
-    <script type="module" src="./vm_product_model.js"></script>
+    <div class="wallet">
+        <ul class="wallet-list">
+            <li>
+                <button class="wallet-money" value="10">10원</button>
+                <div class="wallet-money-qty"value="10" >0개</div>
+            </li>
+            <li>
+                <button class="wallet-money" value="50">50원</button>
+                <div class="wallet-money-qty" value="50">1개</div>
+            </li>
+            <li>
+                <button class="wallet-money" value="100">100원</button>
+                <div class="wallet-money-qty" value="100">5개</div>
+            </li>
+            <li>
+                <button class="wallet-money" value="500">500원</button>
+                <div class="wallet-money-qty" value="500">5개</div>
+            </li>
+            <li>
+                <button class="wallet-money" value="1000">1000원</button>
+                <div class="wallet-money-qty" value="1000">2개</di v>
+            </li>
+            <li>
+                <button class="wallet-money" value="5000">5000원</button>
+                <div class="wallet-money-qty" value="5000">2개</div>
+            </li>
+            <li>
+                <button class="wallet-money" value="10000">10000원</button>
+                <div class="wallet-money-qty" value="10000">1개</div>
+            </li>
+            <li>
+                <div class="wallet-total">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="main.js" type="module"></script>
+<script type="module" src="vmModel.js"></script>
 </body>
-
 </html>
