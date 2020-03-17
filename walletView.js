@@ -1,4 +1,4 @@
-class View {
+class WalletView {
     constructor(model, target) {
       this.target = target;
       this.model = model;
@@ -8,11 +8,14 @@ class View {
     render(data) {
         this.target.walletTotalView.innerHTML = `${data.walletTotal+" 원"}`;
         this.target.VMMoneyView.innerHTML = `${data.VMCash+" 원"}`;
-        this.target.walletQtyView.innerHTML = `${data.money_qty}`;
+        if(this.target.walletMoneyQtyView.value){
+
+        };
+        // this.target.walletQtyView.innerHTML = `${data.money_qty}`;
     }
     test(data){
         console.log(data);
     }
   }
   
-  export default View;
+  export default WalletView;

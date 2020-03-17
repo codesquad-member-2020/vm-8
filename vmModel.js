@@ -12,7 +12,7 @@ class VMModel extends Observable {
         return money;
     }
     async getProducts() {
-        const response = await fetch('vmProduct.json');
+        const response = await fetch('./json/vmProduct.json');
         const data = await response.json();
         this.checkPrice(data);
     }
@@ -25,7 +25,6 @@ class VMModel extends Observable {
                 product.focus = "true";
             }
         });
-        // console.log(jsonData.product[0].name);
     }
 }
 

@@ -1,6 +1,6 @@
 import Observable from "./observable.js";
 
-class Model extends Observable {
+class WalletModel extends Observable {
   constructor(url) {
     super();
     this.url = url;
@@ -38,4 +38,4 @@ class Model extends Observable {
   }
 }
 
-export default Model;
+export default WalletModel;
