@@ -2,7 +2,6 @@ import WalletView from "../wallet/walletView.js";
 import WalletModel from "../wallet/walletModel.js";
 
 
-
 const wallet = document.querySelector(".wallet");
 const walletTotalView = document.querySelector(".wallet-total");
 const VMMoneyView = document.querySelector(".vm-selector-money");
@@ -26,7 +25,6 @@ const walletView = new WalletView(walletModel, views);
 
 walletList.addEventListener("click", function(event) {
   if (event.target.tagName !== "BUTTON") return;
-  console.log(event.target.value);
   walletModel.pay(Number(event.target.value));
 });
 
