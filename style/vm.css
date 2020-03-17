@@ -57,6 +57,9 @@
     box-sizing: border-box;
 
 }
+.product-li-focus {
+    border: solid 4px #FA5858;
+}
 .vm-selector {
     display: flex;
     flex-direction: column;
