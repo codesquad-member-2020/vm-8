@@ -1,7 +1,6 @@
-import WalletView from "./walletView.js";
-import WalletModel from "./walletModel.js";
-import VMView from "./vmProductView.js";
-import VMModel from "./vmModel.js";
+import WalletView from "../wallet/walletView.js";
+import WalletModel from "../wallet/walletModel.js";
+
 
 
 const wallet = document.querySelector(".wallet");
@@ -21,10 +20,9 @@ const views = {
 };
 
 const walletModel = new WalletModel("http://localhost:5500/json/walletMoney.json");
-const vmModel = new VMModel();
 const walletView = new WalletView(walletModel, views);
 
-const vmView = new VMView(walletModel,vmModel,vmMessage);
+// const vmView = new VMView(walletModel,vmModel,vmMessage);
 
 walletList.addEventListener("click", function(event) {
   if (event.target.tagName !== "BUTTON") return;

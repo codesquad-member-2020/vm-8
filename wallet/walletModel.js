@@ -1,4 +1,4 @@
-import Observable from "./observable.js";
+import Observable from "../module/observable.js";
 
 class WalletModel extends Observable {
   constructor(url) {
