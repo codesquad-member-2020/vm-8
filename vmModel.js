@@ -3,21 +3,29 @@ import Observable from "./observable.js";
 class VMModel extends Observable {
     constructor() {
         super();
+        //this.selectorMoney = this.getSelectorMoney();
+        this.selectorMoney = 2000;
         this.getProducts();
-        this.selectorMoney = this.getSelectorMoney();
     }
     getSelectorMoney() {
-        const selectorMoney = document.querySelector('.vm-selector-money').innerText.replace(/[^0-9]/g, "");
-        return selectorMoney;
+        const money = document.querySelector('.vm-selector-money').innerText.replace(/[^0-9]/g, "");
+        return money;
     }
-    getProducts() {
-        fetch('vmProduct.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (jsonData) {
-                console.log("json"+JSON.stringify(jsonData));
-            });
+    async getProducts() {
+        const response = await fetch('vmProduct.json');
+        const data = await response.json();
+        this.checkPrice(data);
+    }
+    checkPrice(jsonData) {
+        // jsonData.product.array.forEach(element => {
+        //     console.log(element);
+        // });
+        jsonData.product.forEach(product => {
+            if (product.price <= this.selectorMoney) {
+                product.focus = "true";
+            }
+        });
+        // console.log(jsonData.product[0].name);
     }
 }
 

@@ -1,7 +1,8 @@
 class View {
-    constructor(model) {
+    constructor(model, target) {
       this.model = model;
-      this.model.subscribe(model);
+      this.target = target;
+      this.model.subscribe(this.render.bind(this));
     }
   
     render(data) {
