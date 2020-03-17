@@ -60,7 +60,7 @@
 .product-li-focus {
     border: solid 4px #FA5858;
 }
-.vm-selector {
+.vm-select {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -68,7 +68,7 @@
     justify-content: space-around;
 
 }
-.vm-selector-money {
+.vm-select-money {
     width: 85%;
     height: 40px;
     line-height: 40px;
@@ -80,18 +80,18 @@
     font-weight: bold;
     margin-top: 15px;
 }
-.vm-selector-number {
+.vm-select-number {
     width: 80%;
     border-radius: 10px;
     background-color: #353C48;
     padding: 10px 0px;
 }
-.vm-selector-number>ul {
+.vm-select-number>ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.vm-selector-number >ul>li {
+.vm-select-number >ul>li {
     border: solid 2px #BDBDBD;
     width: 60px;
     height: 60px;
@@ -105,7 +105,7 @@
     font-weight: bold;
     padding-top: 5px;
 }
-.vm-selector-number>ul>li:nth-child(11){
+.vm-select-number>ul>li:nth-child(11){
     width: 130px;
     height: 60px;
     font-size: 25px;
@@ -115,7 +115,7 @@
     color: #353C48;
     border-color: #FA5858;
 }
-.vm-selector-message {
+.vm-select-message {
     width: 85%;
     height: 180px;
     margin-bottom: 20px;

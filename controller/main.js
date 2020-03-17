@@ -4,13 +4,13 @@ import WalletModel from "../wallet/walletModel.js";
 
 const wallet = document.querySelector(".wallet");
 const walletTotalView = document.querySelector(".wallet-total");
-const VMMoneyView = document.querySelector(".vm-selector-money");
+const VMMoneyView = document.querySelector(".vm-select-money");
 const walletList = document.querySelector(".wallet-list");
 const walletMoneyQtyView = document.querySelectorAll(".wallet-money-qty");
 
 //test용
 
-const vmMessage = document.querySelector(".vm-selector-message");
+const vmMessage = document.querySelector(".vm-select-message");
 
 const views = {
   walletTotalView: walletTotalView,
