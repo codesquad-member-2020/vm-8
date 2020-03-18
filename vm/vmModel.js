@@ -35,6 +35,7 @@ class VmModel extends Observable {
         if(this.selectedNumber==this.products[i].id){
             console.log(this.products[i].price);
             this.selectedNumber = "";
+
         }
     };
     

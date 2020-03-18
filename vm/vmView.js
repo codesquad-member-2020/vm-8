@@ -22,12 +22,16 @@ class VmView {
   }
 
   walletDataRender(data) {
+    this.target.VMMoneyView.innerHTML = `${data.VMCash+" 원"}`;
     const dataIndex = data.currentIndex;
-    // console.log(data.walletMoney[dataIndex].money+" / "+data.walletMoney[dataIndex].money_qty)
     if (dataIndex == null) return;
     this.target.vmMessageView.innerHTML += `${data.walletMoney[dataIndex].money + " 원이 투입되었습니다."}<br><br>`;
   }
 
+  // selectProductMessage(){
+  //   if (this.vmModel.selectedNumber == "") return;
+  //   this.target.vmMessageView.innerHTML += `${this.vmModel.selectedNumber + "번 상품을 선택하셨습니다."}<br><br>`;
+  // }
 }
 
 export default VmView;

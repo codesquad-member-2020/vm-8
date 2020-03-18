@@ -7,15 +7,11 @@ class WalletView {
   
     render(data) {
         this.target.walletTotalView.innerHTML = `${data.walletTotal+" 원"}`;
-        this.target.VMMoneyView.innerHTML = `${data.VMCash+" 원"}`;
         for(var i=0; i<data.walletMoney.length;i++){
           this.target.walletMoneyQtyView[i].innerHTML =`${data.walletMoney[i].money_qty+" 개"}`;
         }
     
       }
-    test(data){
-        console.log(data);
-    }
   }
   
   export default WalletView;

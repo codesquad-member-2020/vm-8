@@ -11,24 +11,24 @@ const vmMessageView = document.querySelector(".vm-select-message");
 const vmSelectNumber = document.querySelector(".vm-select-number");
 const walletList = document.querySelector(".wallet-list");
 
-const views = {
+const walletTarget = {
     walletTotalView: walletTotalView,
     walletMoneyQtyView: walletMoneyQtyView,
-    VMMoneyView: VMMoneyView
 };
 
 const productUl = document.querySelector('.vm-product-menu > ul');
-const target = {
+
+const vmTarget = {
     productUl: productUl,
     vmMessageView: vmMessageView,
     walletMoneyQtyView: walletMoneyQtyView,
-
+    VMMoneyView: VMMoneyView
 }
 
 const vmModel = new VmModel();
 const walletModel = new WalletModel("http://localhost:5500/json/walletMoney.json");
-const vmView = new VmView(vmModel, walletModel, target);
-const walletView = new WalletView(walletModel, views);
+const vmView = new VmView(vmModel, walletModel, vmTarget);
+const walletView = new WalletView(walletModel, walletTarget);
 
 
 walletList.addEventListener("click", function (event) {
