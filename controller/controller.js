@@ -8,6 +8,9 @@ const walletTotalView = document.querySelector(".wallet-total");
 const walletMoneyQtyView = document.querySelectorAll(".wallet-money-qty");
 const VMMoneyView = document.querySelector(".vm-select-money");
 const vmMessageView = document.querySelector(".vm-select-message");
+const vmSelectNumber = document.querySelector(".vm-select-number");
+const walletList = document.querySelector(".wallet-list");
+
 const views = {
     walletTotalView: walletTotalView,
     walletMoneyQtyView: walletMoneyQtyView,
@@ -27,10 +30,17 @@ const walletModel = new WalletModel("http://localhost:5500/json/walletMoney.json
 const vmView = new VmView(vmModel, walletModel, target);
 const walletView = new WalletView(walletModel, views);
 
-const walletList = document.querySelector(".wallet-list");
 
 walletList.addEventListener("click", function (event) {
     if (event.target.tagName !== "BUTTON") return;
     walletModel.pay(Number(event.target.value));
     vmModel.checkPrice(walletModel.walletData.VMCash);
+});
+
+vmSelectNumber.addEventListener("click",function(event){
+    if(event.target.tagName !== "LI") return;
+    let isSelected = false;
+    if(event.target.value=="10") isSelected = true;
+    vmModel.selectNumber(event.target.value,isSelected);
+    
 });

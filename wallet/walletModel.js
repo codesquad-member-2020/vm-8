@@ -9,7 +9,7 @@ class WalletModel extends Observable {
       walletMoney: {},
       walletTotal: 0,
       VMCash: 0,
-      value: 0
+      currentIndex : null,
     };
   }
   pay(value) {
@@ -18,10 +18,14 @@ class WalletModel extends Observable {
         this.walletData.walletMoney[i].money == value &&
         this.walletData.walletMoney[i].money_qty != 0
       ) {
+        this.walletData.boolean = false;
+        this.walletData.currentIndex = i;
         this.walletData.walletTotal -= value;
         this.walletData.VMCash += value;
         this.walletData.walletMoney[i].money_qty -= 1;
-        (this.walletData.walletMoney[i].money_qty == 0 ) ? this.walletData.value = 0 : this.walletData.value = value;
+        // if (this.walletData.walletMoney[i].money_qty === 0 ) this.walletData.boolean = true;
+        // this.walletData.currentQty = this.walletData.walletMoney[i].money_qty;
+        // this.walletData.currentValue = value
 
       }
 

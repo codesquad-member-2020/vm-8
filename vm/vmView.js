@@ -22,8 +22,10 @@ class VmView {
   }
 
   walletDataRender(data) {
-    if (data.value == 0) return;
-    this.target.vmMessageView.innerHTML += `${data.value + " 원이 투입되었습니다."}<br><br>`;
+    const dataIndex = data.currentIndex;
+    // console.log(data.walletMoney[dataIndex].money+" / "+data.walletMoney[dataIndex].money_qty)
+    if (dataIndex == null) return;
+    this.target.vmMessageView.innerHTML += `${data.walletMoney[dataIndex].money + " 원이 투입되었습니다."}<br><br>`;
   }
 
 }
