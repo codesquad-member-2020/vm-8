@@ -17,7 +17,7 @@ const views = {
 const productUl = document.querySelector('.vm-product-menu > ul');
 const target = {
     productUl: productUl,
-    vmMessageView :vmMessageView,
+    vmMessageView: vmMessageView,
     walletMoneyQtyView: walletMoneyQtyView,
 
 }
