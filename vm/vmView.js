@@ -1,8 +1,11 @@
 class VmView {
-  constructor(model, target) {
+  constructor(model, model2,target) {
     this.model = model;
+    this.model2 = model2;
     this.target = target;
     this.model.subscribe(this.render.bind(this));
+    this.model2.subscribe(this.walletDataRender.bind(this));
+
   }
   render(products) {
     this.target.productUl.innerHTML = "";
@@ -17,6 +20,12 @@ class VmView {
       this.target.productUl.innerHTML += template;
     });
   }
+  
+  walletDataRender(data){
+    if(data.value==0) return;
+    this.target.vmMessageView.innerHTML += `${data.value+" 원이 투입되었습니다."}<br><br>`;
+  }
+
 }
 
 export default VmView;
