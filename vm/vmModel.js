@@ -3,39 +3,25 @@ import Observable from "../module/observable.js";
 class VmModel extends Observable {
     constructor() {
         super();
-        this.product;
+        this.products;
         this.init();
+        this.selectMoney;
     }
     async init() {
-       const response = await fetch("../json/vmProduct.json");
-       const data = await response.json();
-       this.product = data.product;
-       this.notify(this.product);
+        const response = await fetch("../json/vmProduct.json");
+        const data = await response.json();
+        this.products = data.product;
+        this.notify(this.products);
     }
-
-    
-    //     // this.selectorMoney = this.getSelectorMoney();
-    //     this.selectorMoney
-    //     this.getProducts();
-    // }
-    // getSelectorMoney() {
-    //     const money = document.querySelector('.vm-selector-money').innerText.replace(/[^0-9]/g, "");
-    //     return money;
-    // }
-    // async getProducts() {
-    //     const response = await fetch("../json/vmProduct.json");
-    //     const data = await response.json();
-    //     this.checkPrice(data);
-    // }
-    // checkPrice(jsonData) {
-    //     jsonData.product.forEach(product => {
-    //         if (product.price <= this.selectorMoney) {
-    //             product.focus = "true";
-    //         } 
-    //     });
-    //     console.log(jsonData);
-    // }
-
+    checkPrice(selectMoney) {
+        this.selectMoney = selectMoney;
+        this.products.forEach(product => {
+            if (product.price <= this.selectMoney) {
+                product.focus = "true";
+            }
+        });
+        this.notify(this.products);
+    }
 }
 
 export default VmModel;

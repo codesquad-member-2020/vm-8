@@ -46,6 +46,18 @@
     background-color: #7A818B;
     color: whitesmoke;
 }
+.product-name-focus {
+    border: solid 1px #BDBDBD;
+    height: 60px;
+    text-align: center;
+    padding-top: 22%;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    font-size: 15px;
+    background-color: #0091f2;
+    color: whitesmoke;
+}
 .product-price {
     width: 100%;
     height: 22px;
@@ -56,9 +68,6 @@
     padding: 2px;
     box-sizing: border-box;
 
-}
-.product-li-focus {
-    border: solid 4px #FA5858;
 }
 .vm-select {
     display: flex;

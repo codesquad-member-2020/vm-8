@@ -5,12 +5,16 @@ class VmView {
     this.model.subscribe(this.render.bind(this));
   }
   render(products) {
+    this.target.productUl.innerHTML = "";
+    let className = "";
     products.forEach(product => {
-      const template = `<li class="product-li"><div class="product-name">${product.name}</div><p class="product-price">${product.price}</p></li>`;
-      this.target.productUl.innerHTML += template;
       if (product.focus === "true") {
-        document.querySelector('.product-li').className = 'product-li-focus';
+        className = "product-name-focus";
+      } else {
+        className = "product-name";
       }
+      const template = `<li><div class="${className}">${product.name}</div><p class="product-price">${product.price}</p></li>`;
+      this.target.productUl.innerHTML += template;
     });
   }
 }
