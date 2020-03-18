@@ -8,7 +8,8 @@ class WalletModel extends Observable {
     this.walletData = {
       walletMoney: {},
       walletTotal: 0,
-      VMCash: 0
+      VMCash: 0,
+      value: 0
     };
   }
   pay(value) {
@@ -20,7 +21,10 @@ class WalletModel extends Observable {
         this.walletData.walletTotal -= value;
         this.walletData.VMCash += value;
         this.walletData.walletMoney[i].money_qty -= 1;
+        (this.walletData.walletMoney[i].money_qty == 0 ) ? this.walletData.value = 0 : this.walletData.value = value;
+
       }
+
     }
     this.notify(this.walletData);
   }
