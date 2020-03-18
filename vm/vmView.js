@@ -1,10 +1,10 @@
 class VmView {
-  constructor(model, model2, target) {
-    this.model = model;
-    this.model2 = model2;
+  constructor(vmModel, walletModel, target) {
+    this.vmModel = vmModel;
+    this.walletModel = walletModel;
     this.target = target;
-    this.model.subscribe(this.render.bind(this));
-    this.model2.subscribe(this.walletDataRender.bind(this));
+    this.vmModel.subscribe(this.render.bind(this));
+    this.walletModel.subscribe(this.walletDataRender.bind(this));
 
   }
   render(products) {
