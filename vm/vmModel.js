@@ -1,44 +1,40 @@
 import Observable from "../module/observable.js";
 
 class VmModel extends Observable {
-  constructor() {
+  constructor(vmProductModel) {
     super();
+    this.vmProductModel = vmProductModel;
     this.products;
-    this.init();
     this.selectMoney;
     this.selectedNumber = "";
   }
-  async init() {
-    const response = await fetch("../json/vmProduct.json");
-    const data = await response.json();
-    this.products = data.product;
-    this.notify(this.products);
+  insertMoney(money) {
+    this.selectMoney = money;
   }
-  checkPrice(selectMoney) {
-    this.selectMoney = selectMoney;
-    this.products.forEach(product => {
-      if (product.price <= this.selectMoney) {
-        product.focus = "true";
+  selectNumber(number, products) {
+    this.products = products;
+    if (number == "10") {
+      if (parseInt(this.selectedNumber) <= this.products.length) {
+        this.selectProduct();
       }
-    });
-    this.notify(this.products);
-  }
-  selectNumber(number, isSelected) {
-    if (number != "10") this.selectedNumber = this.selectedNumber + number;
-    if (isSelected == false) return;
-    return this.selectProduct();
+      this.selectedNumber = "";
+    } else {
+      this.selectedNumber += number;
+    }
   }
   selectProduct() {
-    console.log(this.selectedNumber + " 번 상품선택");
-    
-    for(var i = 0; i<this.products.length; i++){
-        if(this.selectedNumber==this.products[i].id){
-            console.log(this.products[i].price);
-            this.selectedNumber = "";
-        
+    this.products.forEach(product => {
+      if (product.id == this.selectedNumber) {
+        if (product.price <= this.selectMoney) {
+          this.selectMoney = this.selectMoney - product.price;
+          console.log('check', this.selectMoney);
+          this.notify(product.id + "번 상품을 선택하셨습니다.<br><br>");
+          this.vmProductModel.checkPrice(this.selectMoney);
+        } else {
+          this.notify("투입 금액이 부족합니다.<br><br>");
         }
-    };
-    
+      }
+    });
   }
 }
 
