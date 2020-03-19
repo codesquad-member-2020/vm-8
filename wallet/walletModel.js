@@ -3,8 +3,7 @@ import Observable from "../module/observable.js";
 class WalletModel extends Observable {
   constructor(url) {
     super();
-    this.url = url;
-    this.getInitialData(this.url);
+    this.init();
     this.walletData = {
       walletMoney: {},
       walletTotal: 0,
@@ -12,6 +11,12 @@ class WalletModel extends Observable {
       currentIndex: null
     };
   }
+  async init() {
+    const response = await fetch("./json/walletMoney.json");
+    const data = await response.json();
+    this.walletData.walletMoney = data;
+    await this.setWalletData(data);
+}
   pay(cash) {
     for (let i = 0; i < this.walletData.walletMoney.length; i++) {
       const moneyData = this.walletData.walletMoney[i];
@@ -34,13 +39,6 @@ class WalletModel extends Observable {
 
     this.walletData.walletTotal = walletTotal;
     this.notify(this.walletData);
-  }
-  getInitialData() {
-    fetch(this.url)
-      .then(function(res) {
-        return res.json();
-      })
-      .then(myJson => this.setWalletData(myJson));
   }
 }
 
