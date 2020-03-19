@@ -28,7 +28,7 @@ const vmTarget = {
 
 const vmProductModel = new VmProductModel();
 const vmModel = new VmModel(vmProductModel);
-const walletModel = new WalletModel("./json/walletMoney.json");
+const walletModel = new WalletModel("../json/walletMoney.json");
 const vmView = new VmView(vmModel, walletModel, vmTarget);
 const vmProductView = new VmProductView(vmProductModel, vmTarget);
 const walletView = new WalletView(walletModel, walletTarget);

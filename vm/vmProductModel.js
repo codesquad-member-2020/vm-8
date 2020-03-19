@@ -1,5 +1,4 @@
 import Observable from "../module/observable.js";
-import Observable from "../module/observable.js";
 
 class VmProductModel extends Observable {
     constructor() {
@@ -25,6 +24,7 @@ class VmProductModel extends Observable {
             }
         });
         this.notify(this.products);
+
     }
 }
 

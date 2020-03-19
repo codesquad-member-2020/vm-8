@@ -124,6 +124,12 @@
     color: #353C48;
     border-color: #FA5858;
 }
+.vm-select-number >ul>li:hover{
+    background-color: #6E6E6E;
+    border: solid 2px #6E6E6E;
+
+
+}
 .vm-select-message {
     width: 85%;
     height: 180px;
@@ -156,6 +162,9 @@
     font-weight: bold;
     color:#353C48 ;
     border-radius: 10px;
+}
+.wallet-money:hover{
+    background-color:#d8d8d8;
 }
 .wallet-money-qty {
     width: 100px;

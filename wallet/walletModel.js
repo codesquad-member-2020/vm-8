@@ -9,29 +9,22 @@ class WalletModel extends Observable {
       walletMoney: {},
       walletTotal: 0,
       VMCash: 0,
-      currentIndex : null,
+      currentIndex: null
     };
   }
-  pay(value) {
-    for (var i = 0; i < this.walletData.walletMoney.length; i++) {
-      if (
-        this.walletData.walletMoney[i].money == value &&
-        this.walletData.walletMoney[i].money_qty != 0
-      ) {
-        this.walletData.boolean = false;
+  pay(cash) {
+    for (let i = 0; i < this.walletData.walletMoney.length; i++) {
+      const moneyData = this.walletData.walletMoney[i];
+      if (moneyData.money == cash && moneyData.money_qty > 0) {
         this.walletData.currentIndex = i;
-        this.walletData.walletTotal -= value;
-        this.walletData.VMCash += value;
+        this.walletData.walletTotal -= cash;
+        this.walletData.VMCash += cash;
         this.walletData.walletMoney[i].money_qty -= 1;
-        // if (this.walletData.walletMoney[i].money_qty === 0 ) this.walletData.boolean = true;
-        // this.walletData.currentQty = this.walletData.walletMoney[i].money_qty;
-        // this.walletData.currentValue = value
-
       }
-
     }
     this.notify(this.walletData);
   }
+  
   setWalletData(initialData) {
     this.walletData.walletMoney = initialData;
     const walletTotal = initialData.reduce(
