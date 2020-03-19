@@ -1,7 +1,7 @@
 import Observable from "../module/observable.js";
 
 class WalletModel extends Observable {
-  constructor(url) {
+  constructor() {
     super();
     this.init();
     this.walletData = {

@@ -34,11 +34,20 @@
     width: 80px;
     margin: 10px;
 }
+.product-id {
+    color: black;
+    font-weight: bolder;
+    text-align: start;
+    position: relative;
+    top: -7px;
+    margin-left: 1px;
+    font-size: 12px;
+}
 .product-name {
     border: solid 1px #BDBDBD;
     height: 60px;
     text-align: center;
-    padding-top: 22%;
+    padding-top: 10%;
     padding-left: 1px;
     padding-right: 1px;
     padding-bottom: 1px;
@@ -50,7 +59,7 @@
     border: solid 1px #BDBDBD;
     height: 60px;
     text-align: center;
-    padding-top: 22%;
+    padding-top: 10%;
     padding-left: 1px;
     padding-right: 1px;
     padding-bottom: 1px;

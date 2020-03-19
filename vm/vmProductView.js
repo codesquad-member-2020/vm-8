@@ -13,7 +13,7 @@ class VmProductView {
             } else {
                 className = "product-name";
             }
-            const template = `<li><div class="${className}">${product.name}</div><p class="product-price">${product.price}</p></li>`;
+            const template = `<li><div class="${className}"><div class="product-id">${product.id}</div>${product.name}</div><p class="product-price">${product.price}</p></li>`;
             this.target.productUl.innerHTML += template;
         });
     }
