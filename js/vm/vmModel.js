@@ -1,4 +1,4 @@
-import Observable from "../module/observable.js";
+import Observable from "../common/observable.js";
 
 class VmModel extends Observable {
   constructor(vmProductModel) {

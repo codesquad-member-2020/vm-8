@@ -1,4 +1,4 @@
-import Observable from "../module/observable.js";
+import Observable from "../common/observable.js";
 
 class VmProductModel extends Observable {
     constructor() {
@@ -8,9 +8,9 @@ class VmProductModel extends Observable {
         this.selectMoney;
     }
     async init() {
-        const response = await fetch("./json/vmProduct.json");
+        const response = await fetch("../mockdata/vmProducts.json");
         const data = await response.json();
-        this.products = data.product;
+        this.products = data.products;
         this.notify(this.products);
     }
     checkPrice(selectMoney) {
@@ -21,8 +21,11 @@ class VmProductModel extends Observable {
             if (product.price <= this.selectMoney) {
                 product.focus = "true";
                 console.log(product);
+            } else {
+                product.focus = "false";
             }
         });
+        // 실행
         this.notify(this.products);
     }
 }

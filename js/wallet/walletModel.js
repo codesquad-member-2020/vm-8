@@ -1,4 +1,4 @@
-import Observable from "../module/observable.js";
+import Observable from "../common/observable.js";
 
 class WalletModel extends Observable {
   constructor() {
@@ -12,7 +12,7 @@ class WalletModel extends Observable {
     };
   }
   async init() {
-    const response = await fetch("./json/walletMoney.json");
+    const response = await fetch("../mockdata/walletMoney.json");
     const data = await response.json();
     this.walletData.walletMoney = data;
     await this.setWalletData(data);
