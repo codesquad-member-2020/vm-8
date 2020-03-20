@@ -24,7 +24,6 @@ class VmProductModel extends Observable {
             }
         });
         this.notify(this.products);
-
     }
 }
 
