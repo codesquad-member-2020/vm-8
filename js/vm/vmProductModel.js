@@ -21,8 +21,11 @@ class VmProductModel extends Observable {
             if (product.price <= this.selectMoney) {
                 product.focus = "true";
                 console.log(product);
+            } else {
+                product.focus = "false";
             }
         });
+        // 실행
         this.notify(this.products);
 
     }
