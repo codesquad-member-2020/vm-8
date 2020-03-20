@@ -7,7 +7,6 @@ class VmProductView {
     render(products) {
         console.log('render');
         this.target.productUl.innerHTML = "";
-        debugger;
         let className = "";
         products.forEach(product => {
             if (product.focus === "true") {
@@ -17,7 +16,6 @@ class VmProductView {
             }
             const template = `<li><div class="${className}"><div class="product-id">${product.id}</div>${product.name}</div><p class="product-price">${product.price}</p></li>`;
             this.target.productUl.innerHTML += template;
-            debugger;
         });
     }
 }

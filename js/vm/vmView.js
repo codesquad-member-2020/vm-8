@@ -15,11 +15,6 @@ class VmView {
     if (dataIndex == null) return;
     this.target.vmMessageView.innerHTML += `${data.walletMoney[dataIndex].money + " 원이 투입되었습니다."}<br><br>`;
   }
-
-  // selectProductMessage(){
-  //   if (this.vmModel.selectedNumber == "") return;
-  //   this.target.vmMessageView.innerHTML += `${this.vmModel.selectedNumber + "번 상품을 선택하셨습니다."}<br><br>`;
-  // }
 }
 
 export default VmView;

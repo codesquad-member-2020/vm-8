@@ -27,7 +27,6 @@ class VmModel extends Observable {
       if (product.id == this.selectedNumber) {
         if (product.price <= this.selectMoney) {
           this.selectMoney = this.selectMoney - product.price;
-          console.log('check', this.selectMoney);
           this.notify(product.id + "번 상품을 구매하셨습니다.<br><br>");
           this.vmProductModel.checkPrice(this.selectMoney);
         } else {
